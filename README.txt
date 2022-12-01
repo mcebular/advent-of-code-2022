@@ -14,4 +14,4 @@ perl dayXX.pl arg1 arg2
 Additional requirements:
 ------------------------
 
-None so far.
+- cpan String::Util
