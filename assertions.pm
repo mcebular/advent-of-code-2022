@@ -3,7 +3,7 @@ package assertions;
 use Exporter;
 
 @ISA = qw(Exporter);
-@EXPORT = qw(assert assertTrue assertEq);
+@EXPORT = qw(assert assertTrue assertFalse assertEq);
 
 sub assert {
     my ($actual, $expected) = @_;
@@ -16,6 +16,13 @@ sub assertTrue {
     my ($value) = @_;
     if (!$value) {
         die "assertion failed: value is not true, was '$value'";
+    }
+}
+
+sub assertFalse {
+    my ($value) = @_;
+    if ($value) {
+        die "assertion failed: value is true, was '$value'";
     }
 }
 
