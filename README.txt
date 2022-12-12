@@ -15,3 +15,4 @@ Additional requirements:
 ------------------------
 
 - cpan String::Util
+- cpan List::Priority
